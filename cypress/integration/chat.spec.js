@@ -30,5 +30,9 @@ context('a user wants to chat', () => {
     cy.get('button')
       .contains(/send/i)
       .click();
+
+    cy.get('.chat-board_message')
+      .should('have.text', 'My man!')
+      .and('be.visible');
   });
 });
