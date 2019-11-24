@@ -7,13 +7,10 @@
 context('a user wants to chat', () => {
 
   beforeEach(() => {
-    cy.visit('/');
+    cy.login();
   });
 
-  it('steps through logging in and sending someone a greeting', () => {
-    cy.get('button')
-      .contains(/login/i)
-      .click();
+  it('sends someone a greeting', () => {
 
     cy.get('.chat-board > h3')
       .should('have.text', 'Select contact')

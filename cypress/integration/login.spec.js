@@ -4,19 +4,10 @@
 context('a user wants to log in', () => {
 
   beforeEach(() => {
-    cy.visit('/');
+    cy.login();
   });
 
-  it('steps through logging in to the site', () => {
-    cy.get('h3')
-      .should('have.text', 'Login')
-      .and('be.visible');
-
-    cy.get('button')
-      .should('have.text', 'Login')
-      .and('be.visible')
-      .click();
-
+  it('logs in to the site', () => {
     cy.get('.chat-board')
       .should('be.visible');
 

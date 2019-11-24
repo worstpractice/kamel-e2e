@@ -7,14 +7,10 @@
 context('a user wants to video chat', () => {
 
   beforeEach(() => {
-    cy.visit('/');
+    cy.login();
   });
 
-  it('steps through logging in and starting up a video chat', () => {
-    cy.get('button')
-      .contains(/login/i)
-      .click();
-
+  it('starts up a video chat', () => {
     cy.get('.chat-board > h3')
       .should('have.text', 'Select contact')
       .and('be.visible');
@@ -28,7 +24,5 @@ context('a user wants to video chat', () => {
 
     cy.get('span')
       .click();
-
-    // At the moment, this blows up
   });
 });
