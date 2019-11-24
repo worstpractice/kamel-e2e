@@ -16,6 +16,9 @@
   "rules": {
     "no-unused-expressions": 0,
     "chai-friendly/no-unused-expressions": 2,
-    "spaced-comment": "off"
+    "spaced-comment": "off",
+    "strict": "off",
+    "lines-around-directive": "off",
+    "padded-blocks": "off"
   }
 }
