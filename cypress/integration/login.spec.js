@@ -2,7 +2,7 @@
 
 context('a user wants to log in', () => {
 
-  it('should be enough to just click on the login button', () => {
+  it('clicking the login button should grant you access', () => {
     cy.visit('/');
 
     cy.get('h3')
