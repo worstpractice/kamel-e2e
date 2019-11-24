@@ -6,9 +6,11 @@
 
 context('a user wants to chat', () => {
 
-  it('steps through the whole procedure of sending a greeting', () => {
+  beforeEach(() => {
     cy.visit('/');
+  });
 
+  it('steps through logging in and sending someone a greeting', () => {
     cy.get('button')
       .contains(/login/i)
       .click();

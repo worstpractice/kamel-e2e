@@ -3,9 +3,11 @@
 
 context('a user wants to log in', () => {
 
-  it('clicking the login button should grant you access', () => {
+  beforeEach(() => {
     cy.visit('/');
+  });
 
+  it('steps through logging in to the site', () => {
     cy.get('h3')
       .should('have.text', 'Login')
       .and('be.visible');

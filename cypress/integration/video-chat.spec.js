@@ -6,9 +6,11 @@
 
 context('a user wants to video chat', () => {
 
-  it('steps through the whole procedure of starting up a video chat', () => {
+  beforeEach(() => {
     cy.visit('/');
+  });
 
+  it('steps through logging in and starting up a video chat', () => {
     cy.get('button')
       .contains(/login/i)
       .click();
