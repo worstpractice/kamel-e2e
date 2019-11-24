@@ -1,4 +1,3 @@
-/// <reference types="Cypress" />
 'use strict';
 
 context('a user wants to log in', () => {
@@ -7,7 +6,7 @@ context('a user wants to log in', () => {
     cy.login();
   });
 
-  it('logs in to the site', () => {
+  it('log in to the site', () => {
     cy.get('.chat-board')
       .should('be.visible');
 

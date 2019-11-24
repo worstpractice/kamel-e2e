@@ -1,4 +1,3 @@
-/// <reference types="Cypress" />
 'use strict';
 
 // ***********************************************
@@ -32,5 +31,5 @@ Cypress.Commands.add('login', () => {
   cy.get('button')
     .should('have.text', 'Login')
     .and('be.visible')
-    .click();
+    .click({ multiple: true });
 });
