@@ -1,0 +1,20 @@
+{
+  "name": "kamel-e2e",
+  "version": "1.0.0",
+  "description": "kamel e2e repo",
+  "main": "index.js",
+  "repository": "git@github.com:SaltErik/kamel-e2e.git",
+  "author": "SaltErik <erik.nygren@appliedtechnology.se>",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^3.6.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-chai-friendly": "^0.5.0",
+    "eslint-plugin-cypress": "^2.7.0",
+    "eslint-plugin-import": "^2.18.2"
+  },
+  "scripts": {
+    "test": "yarn run cypress open"
+  }
+}
