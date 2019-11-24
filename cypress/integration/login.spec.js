@@ -1,3 +1,4 @@
+/// <reference types="Cypress" />
 'use strict';
 
 context('a user wants to log in', () => {

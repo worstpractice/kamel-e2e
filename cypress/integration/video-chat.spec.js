@@ -1,3 +1,4 @@
+/// <reference types="Cypress" />
 'use strict';
 
 // NOTE: This test only works if you already have somebody logged onto the server
