@@ -1,4 +1,6 @@
+/// <reference types="cypress" />
 'use strict';
+const Chance = require('chance');
 
 // ***********************************************
 // This example commands.js shows you how to
@@ -26,10 +28,42 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('login', () => {
+Cypress.Commands.add('signUp', () => {
+  const chance = new Chance();
+  const username = chance.word();
+  const password = chance.string();
+  const email = chance.email();
+  const language = 'fr';
   cy.visit('/');
+  cy.get('input[name=username]')
+    .type(username);
+  cy.get('input[name=email]')
+    .type(email);
+  cy.get('input[name=password]')
+    .type(password);
+  cy.get('input[name=language]')
+    .type(language);
   cy.get('button')
-    .should('have.text', 'Login')
-    .and('be.visible')
     .click({ multiple: true });
 });
+
+Cypress.Commands.add('signUpAndLogin', () => {
+  const chance = new Chance();
+  const username = chance.word();
+  const password = chance.string();
+  const email = chance.email();
+  const language = 'fr';
+  cy.visit('/');
+  cy.get('input[name=username]')
+    .type(username);
+  cy.get('input[name=email]')
+    .type(email);
+  cy.get('input[name=password]')
+    .type(password);
+  cy.get('input[name=language]')
+    .type(language);
+  cy.get('button')
+    .click({ multiple: true });
+  cy.visit('/');
+});
+

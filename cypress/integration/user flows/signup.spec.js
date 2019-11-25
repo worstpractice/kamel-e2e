@@ -4,8 +4,8 @@ const Chance = require('chance');
 
 const chance = new Chance();
 
-const username = chance.username();
-const password = chance.password();
+const username = chance.word();
+const password = chance.string();
 const email = chance.email();
 const language = 'fr';
 
