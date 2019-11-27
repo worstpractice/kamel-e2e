@@ -1,5 +1,6 @@
 {
   "nodeVersion": "system",
   "baseUrl": "https://polychat.live",
-  "chromeWebSecurity": false
+  "chromeWebSecurity": false,
+  "integrationFolder": "cypress/tests"
 }
