@@ -27,10 +27,12 @@ chance.mixin({
 chance.mixin({
   user() {
     const [firstName, lastName] = chance.name().split(' ');
+    const languages = ['French', 'German', 'Swedish', 'Spanish', 'English', 'Finnish'];
     return {
       name: `${firstName} ${lastName}`,
       password: chance.password(),
       email: `${firstName}.${lastName}@${chance.word()}.${chance.domain()}`.toLowerCase(),
+      language: chance.pickone(languages),
     };
   },
 });

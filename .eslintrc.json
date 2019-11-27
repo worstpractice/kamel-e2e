@@ -19,6 +19,7 @@
     "spaced-comment": "off",
     "strict": "off",
     "lines-around-directive": "off",
-    "padded-blocks": "off"
+    "padded-blocks": "off",
+    "object-curly-newline": "off"
   }
 }

@@ -4,7 +4,7 @@ const { random } = require('./../../lib/random'); // destructure random.user() f
 
 context('a new user wants to sign up', () => {
 
-  const { name, email, password } = random.user();
+  const { name, email, password, language } = random.user();
 
   it('can reach the site', () => {
     cy.visit('/');
@@ -25,14 +25,10 @@ context('a new user wants to sign up', () => {
   it('fills out the form', () => {
 
     cy.get('form').within(($form) => {
-
       cy.get('#userName').type(name);
-
       cy.get('#email').type(email);
-
       cy.get('#password').type(password);
-
-      cy.get('.language-list').select('German');
+      cy.get('.login_form_user-input_select', { force: true }).select(language);
     });
   });
 
@@ -45,11 +41,8 @@ context('a new user wants to sign up', () => {
   });
 
   it('fills out the login form', () => {
-
     cy.get('form').within(($form) => {
-
       cy.get('#email').type(email);
-
       cy.get('#password').type(password);
     });
   });

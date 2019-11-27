@@ -1,9 +1,15 @@
 # kamel-e2e
 
-Git clone, yarn install and run "yarn test" to start Cypress.
+## How to run
 
-Configure the URL you want to target in the "cypress.json" file, by changing baseUrl.
+      1. git clone git@github.com:SaltErik/kamel-e2e.git
+      2. cd kamel-e2e
+      3. ./init.sh
 
-To test locally set baseUrl to "http://localhost:3000".
+### Configuration
 
-To test remotely, set baseUrl to "http://35.198.67.133".
+By default, the Cypress will target "https://polychat.live".
+
+You can configure the target URL in the "cypress.json" file, by changing the value of "baseUrl".
+
+To test locally, set baseUrl to "http://localhost:3000" (or equivalent).
