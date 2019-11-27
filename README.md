@@ -14,7 +14,7 @@ cd kamel-e2e
 
 By default, the tests are set to run against "https://polychat.live".
 
-You can change the target URL (for *the entire test suite*) in just a single line of code. Pretty convenient.
+You can change the target URL (for *the entire test suite*) in just a single line of code. Pretty convenient, no?
 
 Simply open the "cypress.json" file (located in the root folder) and set the value of "baseUrl" to your desired target URL.
 
