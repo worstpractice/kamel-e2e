@@ -1,8 +1,12 @@
+# kamel's end-to-end testing suite
+
 ### How to run
 
-      1. git clone git@github.com:SaltErik/kamel-e2e.git
-      2. cd kamel-e2e
-      3. ./init.sh
+```bash
+1 git clone git@github.com:SaltErik/kamel-e2e.git
+2 cd kamel-e2e
+3 ./init.sh
+```
 
 ### Configuration
 
