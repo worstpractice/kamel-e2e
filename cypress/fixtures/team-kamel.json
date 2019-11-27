@@ -1,0 +1,26 @@
+{
+  "ariadna": {
+    "name": "Ariadna Villar",
+    "email": "ariadna.villar@appliedtechnology.se",
+    "password": "paquito",
+    "language": "Spanish"
+  },
+  "erik": {
+    "name": "Erik Nygren",
+    "email": "erik.nygren@appliedtechnology.se",
+    "password": "1337",
+    "language": "Swedish"
+  },
+  "leo": {
+    "name": "Leo Danielsson",
+    "email": "leo.danielsson@appliedtechnology.se",
+    "password": "guldbrallor",
+    "language": "Swedish"
+  },
+  "moritz": {
+    "name": "Moritz Ploss",
+    "email": "moritz.ploss@appliedtechnology.se",
+    "password": "rumpelstilzchen",
+    "language": "German"
+  }
+}

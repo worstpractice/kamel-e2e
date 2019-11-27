@@ -27,7 +27,7 @@ chance.mixin({
 chance.mixin({
   user() {
     const [firstName, lastName] = chance.name().split(' ');
-    const languages = ['French', 'German', 'Swedish', 'Spanish', 'English', 'Finnish'];
+    const languages = ['French', 'German', 'Swedish', 'Spanish', 'English', 'Finnish', 'Swahili'];
     return {
       name: `${firstName} ${lastName}`,
       password: chance.password(),

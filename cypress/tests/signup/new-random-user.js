@@ -24,12 +24,11 @@ describe('a new user wants to sign up', () => {
   });
 
   it('fills out the form', () => {
-
     cy.get('form').within(($form) => {
       cy.get('#userName').type(name);
       cy.get('#email').type(email);
       cy.get('#password').type(password);
-      cy.get('.login_form_user-input_select', { force: true }).select(language);
+      cy.get('[name="language"]').select(language);
     });
   });
 
@@ -37,19 +36,8 @@ describe('a new user wants to sign up', () => {
     cy.get('button').contains(/sign up/i).click();
   });
 
-  it('arrives back at the "/login" page', () => {
-    cy.url().should('match', /login/i);
-  });
-
-  it('fills out the login form', () => {
-    cy.get('form').within(($form) => {
-      cy.get('#email').type(email);
-      cy.get('#password').type(password);
-    });
-  });
-
-  it('clicks the "Login" button', () => {
-    cy.get('button').contains(/sign in/i).click();
+  it('logs in normally', () => {
+    cy.login(email, password);
   });
 
   it('has successfully signed up and logged in', () => {

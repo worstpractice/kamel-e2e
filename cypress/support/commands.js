@@ -26,3 +26,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('login', (email, password) => {
+  cy.visit('/');
+
+  cy.url().should('match', /login/i);
+
+  cy.get('form').within(($form) => {
+    cy.get('#email').type(email);
+    cy.get('#password').type(password);
+  });
+
+  cy.get('button').contains(/[sign in]/i).click();
+
+  cy.url().should('match', /[^login]/i);
+  cy.url().should('match', /[^register]/i);
+});
