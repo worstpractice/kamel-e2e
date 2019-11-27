@@ -16,6 +16,6 @@ By default, the tests are set to run against "https://polychat.live".
 
 You can change the target URL (for the *the entire* test suite) in a single line of code.
 
-Simply open the "cypress.json" file (located in the root folder) and change the value of "baseUrl" to the desired target.
+Just open the "cypress.json" file (located in the root folder) and set the value of "baseUrl" to your desired target URL.
 
 To test locally (for example), you would set the value of "baseUrl" to "http://localhost:3000" (or equivalent).
