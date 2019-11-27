@@ -1,8 +1,9 @@
 /// <reference types="cypress" />
 'use strict';
-const { random } = require('./../../lib/random'); // destructure random.user() for name/email/password
+const { random } = require('./../../support/random');
 
-context('a new user wants to sign up', () => {
+
+describe('a new user wants to sign up', () => {
 
   const { name, email, password, language } = random.user();
 
