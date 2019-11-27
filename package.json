@@ -15,7 +15,9 @@
     "eslint-plugin-import": "^2.18.2"
   },
   "scripts": {
-    "test": "yarn run cypress open"
+    "start": "yarn run cypress open",
+    "test": "yarn start",
+    "dev": "yarn start"
   },
   "dependencies": {
     "chance": "^1.1.3"
