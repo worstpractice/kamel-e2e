@@ -3,9 +3,17 @@
 const { random } = require('./../../support/random');
 
 
-describe('an unregistered user wants to log in', () => {
+describe('a login is attempted with invalid credentials', () => {
   const { email } = random.user(); // email without matching password
   const { password } = random.user(); // password without matching email
+
+  it('can reach the site', () => {
+    cy.visit('/');
+  });
+
+  it('has "/login" visible in the navbar', () => {
+    cy.url().should('match', /login/i);
+  });
 
   it('fills out the login form', () => {
     cy.get('form').within(($form) => {

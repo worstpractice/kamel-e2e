@@ -24,7 +24,6 @@ describe('the same guy wants to sign up again', () => {
   });
 
   it('fills out the form', () => {
-
     cy.get('form').within(($form) => {
       cy.get('#userName').type(name);
       cy.get('#email').type(email);
@@ -42,7 +41,7 @@ describe('the same guy wants to sign up again', () => {
   });
 
   it('is informed that the email is already taken', () => {
-    cy.get('.error-message').should('exist').and('be');
+    cy.get('.error-message').should('exist').and('not.be.hidden');
   });
 
   it('even when spamming the "Sign up" button', () => {
@@ -50,7 +49,6 @@ describe('the same guy wants to sign up again', () => {
   });
 
   it('even with a different name', () => {
-
     cy.get('form').within(($form) => {
       cy.get('#userName').type('{selectAll}').type('{backspace}');
       cy.get('#userName').type('Totally Not Me Again');
@@ -59,7 +57,6 @@ describe('the same guy wants to sign up again', () => {
   });
 
   it('even with a different password', () => {
-
     cy.get('form').within(($form) => {
       cy.get('#password').type('{selectAll}').type('{backspace}');
       cy.get('#password').type('notme2020');
@@ -68,7 +65,6 @@ describe('the same guy wants to sign up again', () => {
   });
 
   it('even with a different language preference', () => {
-
     cy.get('form').within(($form) => {
       cy.get('[name="language"]').select('Swahili');
     });
