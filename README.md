@@ -1,14 +1,14 @@
 # kamel's end-to-end testing suite
 
-### How to run
+### Install and run in three simple steps
 
 ```bash
-1 git clone git@github.com:SaltErik/kamel-e2e.git
-2 cd kamel-e2e
-3 ./init.sh
+git clone git@github.com:SaltErik/kamel-e2e.git
+cd kamel-e2e
+./init.sh
 ```
 
-### Configuration
+### Configuration (optional)
 
 By default, the Cypress will target "https://polychat.live".
 
