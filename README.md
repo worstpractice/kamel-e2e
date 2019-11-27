@@ -4,13 +4,7 @@
 
 ```bash
 git clone git@github.com:SaltErik/kamel-e2e.git
-```
-
-```bash
 cd kamel-e2e
-```
-
-```bash
 ./init.sh
 ```
 
