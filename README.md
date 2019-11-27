@@ -1,4 +1,4 @@
-# kamel's end-to-end testing suite
+# Kamel's end-to-end test suite
 
 ### How to run (in three simple steps)
 
