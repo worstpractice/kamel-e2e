@@ -1,18 +1,15 @@
 # Kamel's end-to-end test suite
 
-## How to run (in three simple steps)
+### How to run (in three simple steps)
 
-##### Step one
 ```bash
 git clone git@github.com:SaltErik/kamel-e2e.git
 ```
 
-##### Step two
 ```bash
 cd kamel-e2e
 ```
 
-##### Step three
 ```bash
 ./init.sh
 ```
