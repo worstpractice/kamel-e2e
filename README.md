@@ -1,10 +1,16 @@
 # kamel's end-to-end testing suite
 
-### Install and run in three simple steps
+### How to run
 
 ```bash
 git clone git@github.com:SaltErik/kamel-e2e.git
+```
+
+```bash
 cd kamel-e2e
+```
+
+```bash
 ./init.sh
 ```
 
