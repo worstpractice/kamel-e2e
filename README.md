@@ -1,6 +1,4 @@
-# kamel-e2e
-
-## How to run
+### How to run
 
       1. git clone git@github.com:SaltErik/kamel-e2e.git
       2. cd kamel-e2e
