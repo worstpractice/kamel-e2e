@@ -8,9 +8,10 @@ cd kamel-e2e
 ./init.sh
 ```
 
+
 ***
 
-### Configuration (optional)
+## Configuration (optional)
 
 By default, the tests run against "https://polychat.live".
 
