@@ -8,10 +8,16 @@ cd kamel-e2e
 ./init.sh
 ```
 
-## Optional configuration
+***
 
-By default, the Cypress will target "https://polychat.live".
+### Configuration (optional)
 
-You can configure the target URL in the "cypress.json" file, by changing the value of "baseUrl".
+By default, the tests run against "https://polychat.live".
 
-To test locally, set baseUrl to "http://localhost:3000" (or equivalent).
+You can configure the target URL (for *all* tests) in one conventient place.
+
+Simply open the "cypress.json" file (in the root folder) and change the value of "baseUrl".
+
+#### Example
+
+To test locally (against your own machine), set baseUrl to "http://localhost:3000" (or equivalent).
