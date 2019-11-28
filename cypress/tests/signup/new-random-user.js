@@ -36,6 +36,14 @@ describe('a new user wants to sign up', () => {
     cy.get('button').contains(/sign up/i).click();
   });
 
+  it('is informed that the registration has succeeded', () => {
+    cy.get('.success').should('exist').and('not.be.hidden');
+  });
+
+  it('redirects to the login page', () => {
+    cy.url().should('match', /login/i);
+  });
+
   it('logs in normally', () => {
     cy.login(email, password);
   });

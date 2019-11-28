@@ -5,7 +5,7 @@ const { ariadna, erik, leo, moritz } = require('./../fixtures/team-kamel.json');
 
 describe('a kamel signs up', () => {
 
-  // const { name, email, password, language } = kamel  <-- Destructure your desired Kamel here
+  const { name, email, password, language } = erik; // <-- Destructure your desired Kamel here
 
   it('can reach the site', () => {
     cy.visit('/');
