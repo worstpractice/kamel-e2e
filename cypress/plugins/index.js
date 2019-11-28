@@ -1,3 +1,4 @@
+/// <reference types="cypress" />
 'use strict';
 
 // ***********************************************************
@@ -10,10 +11,28 @@
 // https://on.cypress.io/plugins-guide
 // ***********************************************************
 
-// This function is called when a project is opened or re-opened (e.g. due to
-// the project's config changing)
+// This function is called when a project is opened or re-opened (e.g. due to the project's config changing)
 
-module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
+// `on` is used to hook into various events Cypress emits
+// `config` is the resolved Cypress config
+
+////////////////////////////////////////////////////////////////////////////////
+
+// NOTE: https://github.com/cypress-io/cypress/issues/518#issuecomment-552382781
+
+let shouldSkip = false;
+
+module.exports = (on) => {
+  on('task', {
+    resetShouldSkipFlag() {
+      shouldSkip = false;
+      return null;
+    },
+    shouldSkip(value) {
+      if (value != null) shouldSkip = value;
+      return shouldSkip;
+    },
+  });
 };
+
+////////////////////////////////////////////////////////////////////////////////

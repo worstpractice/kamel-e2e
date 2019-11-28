@@ -5,51 +5,33 @@ const { random } = require('./../../support/random');
 
 describe('a new user wants to sign up', () => {
 
+  // afterEach(() => {
+  //   cy.haltOnError();
+  // });
+
   const { name, email, password, language } = random.user();
 
-  it('can reach the site', () => {
-    cy.visit('/');
-  });
-
-  it('has "/login" visible in the navbar', () => {
-    cy.url().should('match', /login/i);
-  });
-
-  it('clicks the "Register" button', () => {
-    cy.get('a').contains(/register/i).click();
-  });
-
-  it('now has "/register" visible in the navbar', () => {
-    cy.url().should('match', /register/i);
-  });
-
-  it('fills out the form', () => {
-    cy.get('form').within(($form) => {
-      cy.get('#userName').type(name);
-      cy.get('#email').type(email);
-      cy.get('#password').type(password);
-      cy.get('[name="language"]').select(language);
-    });
-  });
-
-  it('clicks the "Sign up" button', () => {
-    cy.get('button').contains(/sign up/i).click();
+  it('attempts to sign up normally', () => {
+    cy.register(name, email, password, language);
   });
 
   it('is informed that the registration has succeeded', () => {
-    cy.get('.success').should('exist').and('not.be.hidden');
+    cy.contains(/success/i).should('be.visible');
   });
 
   it('redirects to the login page', () => {
     cy.url().should('match', /login/i);
   });
 
-  it('logs in normally', () => {
+  it('attempts to log in normally', () => {
     cy.login(email, password);
   });
 
-  it('has successfully signed up and logged in', () => {
-    cy.url().should('match', /[^login]/i);
-    cy.url().should('match', /[^register]/i);
+  it('is not presented with any error message', () => {
+    cy.contains(/wrong/i).should('not.exist');
+  });
+
+  it('arrives to the chat screen', () => {
+    cy.contains(/contact/i).should('be.visible');
   });
 });

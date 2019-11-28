@@ -20,6 +20,10 @@
     "strict": "off",
     "lines-around-directive": "off",
     "padded-blocks": "off",
-    "object-curly-newline": "off"
+    "object-curly-newline": "off",
+    "consistent-return": "off",
+    "max-len": "off",
+    "no-unused-vars": "off",
+    "newline-per-chained-call": "off"
   }
 }
